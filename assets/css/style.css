@@ -223,7 +223,8 @@ article.active {
 .h2,
 .h3,
 .h4,
-.h5 {
+.h5,
+.h6{
   color: var(--white-2);
   text-transform: capitalize;
 }
@@ -235,6 +236,11 @@ article.active {
 .h4 { font-size: var(--fs-4); }
 
 .h5 {
+  font-size: var(--fs-7);
+  font-weight: var(--fw-500);
+}
+
+.h6 {
   font-size: var(--fs-7);
   font-weight: var(--fw-500);
 }
@@ -722,30 +728,31 @@ main {
 }
 
 
+
+
+
+
 /**
  * #clients 
  */
 
+ 
+
 .clients { margin-bottom: 15px; }
 
 .clients-list {
-  display:flex;
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
   justify-content: flex-start;
-  align-items:stretch;
-  gap: 10px 5px;
-  margin: 0 -15px;
+  align-items: flex-start;
+  gap: 10px; /* Adjust as needed */
+  margin: 0 -10px; /* Negative margin to counteract flex gap */
   padding: 25px;
-  padding-bottom: 25px;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  overscroll-behavior-inline: contain;
-  scroll-snap-type: inline mandatory;
-  scroll-padding-inline: 25px;
+  overflow: hidden; /* Hide horizontal scrollbar */
 }
 
 .clients-item {
   min-width: 50%;
-  scroll-snap-align: start;
 }
 
 .clients-item img {
